@@ -1,0 +1,29 @@
+.env
+.env.*
+!.env.example
+
+# Private source material and generated local artifacts
+.private/
+*_PRIVATE*/
+*.zip
+*.7z
+*.rar
+
+# Credentials and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Python/cache artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,50 @@
+project:
+  name: "Sample Glow Studio"
+  production_domain: "https://example-glow.test"
+  framework: "Next.js App Router"
+  deployment_platform: "Vercel"
+  default_branch: "main"
+
+business:
+  primary_name: "Sample Glow Studio"
+  alternate_names:
+    - "Sample Glow"
+  type: "Local beauty service studio"
+  description: "A fictional local studio used to demonstrate an AEO workflow."
+  address:
+    city: "Example City"
+    region: "Example Region"
+    country: "Example Country"
+    public: false
+  service_areas:
+    - "Example City"
+    - "Example University District"
+  services:
+    - id: "svc-bridal-trial"
+      name: "In-studio bridal trial"
+      active: true
+    - id: "svc-event-makeup"
+      name: "Event makeup"
+      active: true
+    - id: "svc-grad-photo"
+      name: "Graduation photo makeup"
+      active: true
+  contacts:
+    email: "hello@example-glow.test"
+    instagram: "https://www.instagram.com/exampleglowstudio/"
+
+goals:
+  selected_tracks:
+    - "keyword-entity"
+    - "technical-seo"
+    - "content-aeo"
+  conversion_events:
+    - "booking inquiry"
+    - "contact form submission"
+  observation_window: "30 days"
+
+constraints:
+  private_facts:
+    - "Exact studio address is not public in this mock."
+  no_go_actions:
+    - "No production submissions in mock project."
