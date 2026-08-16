@@ -1,4 +1,4 @@
 interface:
   display_name: "Han AEO v1"
-  short_description: "AEO/SEO research, approval, execution, measurement."
-  default_prompt: "Use $han-aeo-v1 to audit this site, propose an AEO/SEO optimization plan, and wait for approval before execution."
+  short_description: "Evidence-led AEO, GEO, AI visibility, and SEO."
+  default_prompt: "Use $han-aeo-v1 to improve this site's AEO, GEO, AI visibility, or SEO within the requested scope."

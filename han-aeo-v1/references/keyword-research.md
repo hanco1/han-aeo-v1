@@ -1,141 +1,67 @@
-# Keyword, Entity, and Ratio Reference
+# Keyword and Entity Research Reference
 
-Use this file for keyword optimization, AEO coverage, entity mapping, and portfolio allocation.
+Use this reference to turn evidence into a small, reviewable query and page plan. It is not a keyword-density or percentage-allocation method.
 
-## Optimization Tracks
+## Start with approved scope
 
-Ask the user to choose one or more tracks when the scope is unclear:
+Record the entity, active services, locations, languages the business can actually support, conversion goal, and known exclusions. Mark anything unconfirmed as unknown instead of turning it into content or a claim.
 
-- Brand/entity disambiguation;
-- service/product discovery;
-- local/location discovery;
-- problem/education answers;
-- comparison and alternatives;
-- proof/portfolio/trust;
-- booking/conversion;
-- multilingual coverage;
-- AI visibility/citation testing;
-- technical machine readability.
+## Sources
 
-## Research Plan
+Use the strongest available source and record its date:
 
-Before researching, define:
+1. Approved business facts and visible repository or production pages.
+2. Search Console/Bing exports and analytics, when supplied.
+3. Search results, autocomplete, People Also Ask, local results, and ranking pages.
+4. Customer questions, reviews, support or sales conversations where approval permits.
+5. Dated AI-answer observations using a fixed prompt set.
+6. Official platform documentation for technical requirements.
 
-- entity to optimize for;
-- domain and canonical pages;
-- services/products and inactive exclusions;
-- priority locations and languages;
-- target customer segments;
-- conversion events;
-- competitors and adjacent alternatives;
-- data sources available now;
-- source freshness needs;
-- ambiguity risks.
+Separate observed evidence from assumptions. A competitor page, AI answer, or search suggestion is a research signal, not proof that the business offers a service or has a result.
 
-Use source lanes:
+## Query clusters
 
-1. Approved business facts and repository artifacts.
-2. Search Console/Bing exports if available.
-3. Production pages and raw HTML.
-4. SERP, autocomplete, People Also Ask, related searches, local packs.
-5. Competitor pages that actually rank or are cited.
-6. Customer conversations, reviews, emails, DMs, FAQ logs.
-7. Community/social posts where real users discuss needs.
-8. AI answer tests with a fixed prompt set.
-9. Official platform documentation for technical requirements.
-
-## Query Cluster Schema
-
-Use this shape for each cluster:
+Use one row per coherent customer need. Representative queries are examples to investigate, not promises of demand or rankings.
 
 ```yaml
 cluster:
   id: ""
-  name: ""
-  business_goal: ""
-  services: []
-  locations: []
-  languages: []
+  customer_need: ""
   representative_queries: []
-  intents: []
+  intent: "discovery | comparison | booking | support | brand"
+  business_fit: "High | Medium | Low"
+  sources:
+    - source: ""
+      date: "YYYY-MM-DD"
+      note: ""
+  current_coverage: ""
+  coverage_gap: "High | Medium | Low"
   primary_page: ""
   supporting_pages: []
-  current_coverage: ""
-  evidence_gap: ""
-  content_type: ""
-  conversion_event: ""
-  primary_metric: ""
-  guardrail_metric: ""
-  human_approved: false
+  negative_or_guardrail: ""
+  owner_approval: "pending | approved | not-required"
 ```
 
-## Ratio Means Allocation, Not Density
+## Triage, not a formula
 
-When a user asks for keyword "ratio" or "占比", treat it as allocation of optimization attention across intent clusters, not a fixed keyword density target.
+Prioritize with a transparent 0–3 triage. Do not multiply scores or convert them into percentages.
 
-Recommended portfolio buckets:
+| Dimension | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| Business fit | Unsupported, inactive, or irrelevant | Plausible but needs confirmation | Approved but secondary need | Approved core customer or business need |
+| Evidence | No usable source | One weak or indirect dated signal | One relevant dated source | Approved fact or multiple relevant dated sources |
+| Coverage gap | Already clear and sufficient | Small clarity gap | Incomplete or mixed coverage | Missing, inaccurate, or hard-to-find coverage |
+| Feasibility/risk | Infeasible or high risk | Major review or disproportionate effort | Manageable work and review | Low-risk, feasible next step |
 
-- Primary commercial/service intent: 35 to 50 percent.
-- Local/location intent: 15 to 30 percent for local businesses.
-- Trust/proof/comparison intent: 10 to 25 percent.
-- Educational/problem intent: 10 to 20 percent.
-- Brand/navigation/entity protection: 5 to 15 percent.
-- Multilingual intent: allocate only where the business can support the language and conversion path.
+Record the four labels and explain the recommendation in one sentence. Keep unsupported, inactive, privacy-sensitive, misleading, or doorway-location terms in the negative/guardrail field.
 
-Adjust these with evidence. A high-value service with weak coverage may deserve more share than a high-volume generic term.
+## Intent-to-page mapping
 
-## Priority Formula
+| Cluster / intent | Existing or proposed primary page | Supporting page(s) | Evidence and date | Guardrail | Approval |
+|---|---|---|---|---|---|
+|  |  |  |  |  | pending |
 
-Use a transparent heuristic and show the inputs:
-
-```text
-Priority =
-  (BusinessValue * IntentFit * AEOExtractability * EvidenceStrength * CoverageGap * Measurability)
-  / (Effort * Risk)
-```
-
-Score each factor 1 to 5. Never fabricate volume or competition numbers. If real exports or paid-tool data exist, label the source and date.
-
-Convert scores to recommended share:
-
-```text
-cluster_share = cluster_priority / sum(all_cluster_priorities)
-```
-
-Use caps and floors:
-
-- Cap any single cluster at 40 percent unless the business is truly single-service.
-- Give active core services a floor when the business must be discoverable for them.
-- Give unapproved, inactive, or unsupported services 0 percent.
-- Keep brand/entity protection even when it has low generic search volume.
-
-## Signal Weighting
-
-Rank by signal quality, not mention count.
-
-- Weight 5: first-party business facts, Search Console/Bing exports, current production/repository evidence, customer questions, reviews with real booking friction.
-- Weight 4: expert/operator testimony, credible case study, official local/profile data, measurable before/after evidence.
-- Weight 3: ranking competitor pages, multi-source SERP pattern, repeated community discussion with engagement.
-- Weight 2: general web articles, directories, topical social chatter, weakly sourced comparisons.
-- Weight 1: descriptive mentions with no intent or no business fit.
-- Weight 0: promotional noise, unrelated trend terms, doorway-city variants, inactive services, claims the business cannot support.
-
-Multi-source clusters beat single-source clusters. Exact customer language is more useful for FAQ and answer copy than generic keyword-tool phrases.
-
-## Page Mapping Rules
-
-- Assign one primary page to each high-value intent.
-- Identify missing pages and pages carrying too many unrelated intents.
-- Avoid cannibalization between similar service pages.
-- Avoid city-swap doorway pages.
-- Avoid pages for inactive services.
-- Prefer one strong experiment with proof and measurement over many weak AI-generated pages.
-
-## On-Page Keyword Use
-
-Use keywords as retrieval cues, not stuffing:
-
-- Put the primary intent in the title, H1, direct answer, first visible section, canonical internal links, and metadata when natural.
-- Use entity variants, locations, service details, proof terms, and customer questions in visible helpful content.
-- Use structured data only for facts visible on the page or approved by the business.
-- Do not repeat exact-match phrases mechanically.
+- Give a high-value intent one clear primary page.
+- Mark a missing destination as a **proposed page** until it exists and is approved.
+- Avoid city-swapped doorway pages, duplicate service pages, and pages for services the business cannot confirm.
+- Use visible, approved facts in content and structured data; do not manufacture proof, availability, languages, or outcomes.
