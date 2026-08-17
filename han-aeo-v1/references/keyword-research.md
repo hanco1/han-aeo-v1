@@ -53,7 +53,7 @@ Prioritize with a transparent 0–3 triage. Do not multiply scores or convert th
 | Coverage gap | Already clear and sufficient | Small clarity gap | Incomplete or mixed coverage | Missing, inaccurate, or hard-to-find coverage |
 | Feasibility/risk | Infeasible or high risk | Major review or disproportionate effort | Manageable work and review | Low-risk, feasible next step |
 
-Record the four labels and explain the recommendation in one sentence. Keep unsupported, inactive, privacy-sensitive, misleading, or doorway-location terms in the negative/guardrail field.
+Record the four triage labels and explain the recommendation in one sentence. Keep unsupported, inactive, privacy-sensitive, misleading, or doorway-location terms in the negative/guardrail field.
 
 ## Intent-to-page mapping
 

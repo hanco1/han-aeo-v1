@@ -11,7 +11,11 @@ Use these four fields in every record:
 
 Keep approval status (`pending`, `approved`, or `not-required`) as a separate field.
 
+When one record covers multiple items, repeat the four fields per item — as the Project Brief claims table does — rather than relying only on the single record-level block.
+
 ## 1. Project Brief
+
+The claims table below serves as the claim ledger.
 
 ```markdown
 # Project Brief
@@ -50,9 +54,9 @@ Approval scope: pages, claims, schema, release, or observation only
 Approval status: pending / approved / not-required
 Baseline reference:
 
-| Priority | Proposed item | Existing or proposed page | Evidence (source + date) | Effort/risk | Approval |
-|---|---|---|---|---|---|
-| High |  |  |  | Low / Medium / High | pending |
+| Priority | Proposed item | Existing or proposed page | Evidence (source + date) | Confidence | Change status | Observation status | Effort/risk | Approval |
+|---|---|---|---|---|---|---|---|---|
+| High |  |  |  |  |  |  | Low / Medium / High | pending |
 
 Decision and approver:
 Confidence: verified / inference / hypothesis

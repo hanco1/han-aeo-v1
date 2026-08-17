@@ -1,11 +1,13 @@
 # Current-Branch Candidate Review
 
 Branch candidate: `codex/han-aeo-v1-optimization`
-Commit reviewed: **not yet bound**
+Commit reviewed: `eb993e4` (multi-agent review completed 2026-08-16; follow-up documentation fixes land on this branch after that commit and must be included in the final pre-publication recheck)
 
 ## Status
 
-**Pending review.** This document does not mark the candidate as passed. Bind the review to an exact commit hash, then rerun the review against that commit immediately before publication.
+**Passed content, privacy, and hygiene review at `eb993e4` (2026-08-16).** A 15-agent review across four dimensions (secrets/privacy, content accuracy, claim verification, repo hygiene) found no credentials, no personal information, no private-material leakage, no stale references to deleted files, and no factual AEO/GEO errors; all YAML parses and all internal links resolve. Minor documentation clarifications identified by that review were applied on this branch after `eb993e4`.
+
+A public open-source release remains **blocked by the license gate** below. Immediately before flipping the repository public, rerun a recheck bound to the exact release commit.
 
 ## Candidate file inventory
 
@@ -26,10 +28,10 @@ The former API tutorial, GIF storyboard, and GIF-rendering script are not part o
 
 ## Required review before publication
 
-- Record the branch and exact commit hash being reviewed.
-- Recheck the candidate for private source material, credentials, exports, logged-in browser state, and generated reports.
-- Rerun the relevant validation and review the final file inventory after all release changes are in place.
-- Have the owner choose a license.
+- Record the branch and exact commit hash being reviewed — recorded above.
+- Recheck the candidate for private source material, credentials, exports, logged-in browser state, and generated reports — completed 2026-08-16 at `eb993e4`.
+- Rerun the relevant validation and review the final file inventory after all release changes are in place — done at `eb993e4` on 2026-08-16; must be rerun against the final release commit before publication.
+- Have the owner choose a license — **pending, owner decision required**.
 
 ## License gate
 

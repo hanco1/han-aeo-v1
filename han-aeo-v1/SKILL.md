@@ -41,7 +41,7 @@ Treat `llms.txt` as an optional experiment that other systems may adopt. Google 
 
 - Read `references/aeo-workflow.md` only for a full audit or complete cycle.
 - Read `references/keyword-research.md` for keyword/entity/page mapping, demand evidence, allocation, or prioritization.
-- Read `references/output-templates.md` when producing a project brief, claim ledger, proposal/backlog, change/release report, or observation report; adapt its structure to these four fields.
+- Read `references/output-templates.md` when producing a project brief, claim ledger (the claims table inside the project brief), proposal/backlog, change/release report, or observation report; adapt its structure to these four fields.
 - Read `references/browser-automation.md` before browser, logged-in platform, AI-interface, or visual-verification work.
 
 ## Report
