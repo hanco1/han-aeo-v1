@@ -22,8 +22,6 @@ Han AEO v1 helps an agent research a site, build an evidence base, prepare a pri
 
 ## 🚀 Quick Start
 
-This repository is currently private, so cloning requires authenticated GitHub access. A future public release still requires a final commit-bound review; once public, use the same clone command directly.
-
 Clone the repository, then copy the skill directory to `$HOME/.agents/skills/han-aeo-v1`:
 
 ```bash
@@ -121,4 +119,4 @@ It does not add `llms.txt` by default. Consider it only when it fits the approve
 
 ## 📄 Upload and License
 
-Licensed under the [MIT License](LICENSE). See [UPLOAD_REVIEW.md](UPLOAD_REVIEW.md) before sharing this repository publicly — a final commit-bound review is still required before flipping it public.
+Licensed under the [MIT License](LICENSE). [UPLOAD_REVIEW.md](UPLOAD_REVIEW.md) records the pre-publication review completed before this repository was made public.

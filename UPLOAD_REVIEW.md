@@ -1,13 +1,13 @@
 # Current-Branch Candidate Review
 
 Branch candidate: `codex/han-aeo-v1-optimization`
-Commit reviewed: `eb993e4` (multi-agent review completed 2026-08-16; follow-up documentation fixes land on this branch after that commit and must be included in the final pre-publication recheck)
+Commit reviewed: `eb993e4` (multi-agent review completed 2026-08-16); final commit-bound recheck completed 2026-08-16 at release commit `3a79250`.
 
 ## Status
 
 **Passed content, privacy, and hygiene review at `eb993e4` (2026-08-16).** A 15-agent review across four dimensions (secrets/privacy, content accuracy, claim verification, repo hygiene) found no credentials, no personal information, no private-material leakage, no stale references to deleted files, and no factual AEO/GEO errors; all YAML parses and all internal links resolve. Minor documentation clarifications identified by that review were applied on this branch after `eb993e4`.
 
-The license gate below is resolved (MIT, selected 2026-08-16). The remaining pre-publication requirement is a recheck bound to the exact release commit, run immediately before flipping the repository public.
+The license gate below is resolved (MIT, selected 2026-08-16). The commit-bound recheck was completed 2026-08-16 at release commit `3a79250`; all pre-publication requirements are met.
 
 ## Candidate file inventory
 
@@ -30,9 +30,9 @@ The former API tutorial, GIF storyboard, and GIF-rendering script are not part o
 
 - Record the branch and exact commit hash being reviewed — recorded above.
 - Recheck the candidate for private source material, credentials, exports, logged-in browser state, and generated reports — completed 2026-08-16 at `eb993e4`.
-- Rerun the relevant validation and review the final file inventory after all release changes are in place — done at `eb993e4` on 2026-08-16; must be rerun against the final release commit before publication.
+- Rerun the relevant validation and review the final file inventory after all release changes are in place — done at `eb993e4` on 2026-08-16 and rerun 2026-08-16 at release commit `3a79250`.
 - Have the owner choose a license — **done: MIT, selected by the owner 2026-08-16** (`LICENSE` at the repository root).
 
 ## License gate
 
-**Resolved.** The owner selected the MIT license on 2026-08-16; `LICENSE` is at the repository root. Do not publish as open source until the final commit-bound review is complete.
+**Resolved.** The owner selected the MIT license on 2026-08-16; `LICENSE` is at the repository root. The final commit-bound review is complete (`3a79250`, 2026-08-16).
