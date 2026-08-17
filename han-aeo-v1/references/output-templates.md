@@ -1,187 +1,120 @@
 # Output Templates
 
-Use these templates for proposal, approval, execution, and measurement outputs.
+Use these four lightweight records. Keep change work separate from later observations by using independent status fields.
 
-## Intake Object
+Use these four fields in every record:
 
-```yaml
-project:
-  name: ""
-  repository_path: ""
-  production_domain: ""
-  framework: ""
-  deployment_platform: ""
-  default_branch: ""
-  working_branch: ""
-business:
-  primary_name: ""
-  alternate_names: []
-  type: ""
-  services: []
-  locations: []
-  languages: []
-  contacts: []
-  profiles: []
-goals:
-  selected_tracks: []
-  conversion_events: []
-  observation_window: ""
-constraints:
-  private_facts: []
-  legal_or_privacy_review: []
-  no_go_actions: []
-```
+- **Confidence:** `verified`, `inference`, or `hypothesis`.
+- **Change status:** `not-applicable`, `proposed`, `implemented-locally`, or `deployed`.
+- **Observation status:** `not-measured`, `observing`, or `observed`.
+- **Source:** a specifically named source, such as `owner`, `repository`, `live-site`, `platform-data`, `official-docs`, `analytics-export`, or `search-results`; include its date.
 
-## Claim Ledger
+Keep approval status (`pending`, `approved`, or `not-required`) as a separate field.
+
+When one record covers multiple items, repeat the four fields per item — as the Project Brief claims table does — rather than relying only on the single record-level block.
+
+## 1. Project Brief
+
+The claims table below serves as the claim ledger.
 
 ```markdown
-| Claim ID | Claim | Source | Evidence class | Public? | Last verified | Owner | Status |
-|---|---|---|---|---|---|---|---|
-| CLM-001 |  |  | E1/E2/E3/E4 | yes/no | YYYY-MM-DD |  | active/unverified |
+# Project Brief
+
+Date: YYYY-MM-DD
+Task ID: TASK-000
+Owner:
+Project / example domain:
+Approval scope:
+Approval status: pending / approved / not-required
+
+Goal:
+Known facts (source + date):
+Unknowns and guardrails:
+Baseline to capture before changes:
+
+| Claim ID | Claim | Source + date | Confidence | Change status | Observation status | Approval status |
+|---|---|---|---|---|---|---|
+| CLM-001 |  |  |  |  |  | pending |
+
+Confidence: verified / inference / hypothesis
+Change status: not-applicable / proposed / implemented-locally / deployed
+Observation status: not-measured / observing / observed
+Source: repository: [path] — YYYY-MM-DD
 ```
 
-## Research Plan
+## 2. Proposal, Approval, and Backlog
 
 ```markdown
-**Research Plan**
+# Proposal / Approval / Backlog
 
-Objective:
+Date: YYYY-MM-DD
+Task ID: TASK-000
+Owner:
+Approval scope: pages, claims, schema, release, or observation only
+Approval status: pending / approved / not-required
+Baseline reference:
 
-Selected tracks:
+| Priority | Proposed item | Existing or proposed page | Evidence (source + date) | Confidence | Change status | Observation status | Effort/risk | Approval |
+|---|---|---|---|---|---|---|---|---|
+| High |  |  |  |  |  |  | Low / Medium / High | pending |
 
-Known facts:
-
-Unknowns:
-
-Source lanes:
-
-Competitors/entities to inspect:
-
-AI/search questions to test:
-
-Freshness requirements:
-
-Stop conditions:
+Decision and approver:
+Confidence: verified / inference / hypothesis
+Change status: not-applicable / proposed / implemented-locally / deployed
+Observation status: not-measured / observing / observed
+Source: owner / repository / live-site / platform-data / official-docs / analytics-export / search-results — YYYY-MM-DD
 ```
 
-## Strategy Proposal
+## 3. Change / Release Report
 
 ```markdown
-**AEO/SEO Strategy Proposal**
+# Change / Release Report
 
-Recommendation:
+Date: YYYY-MM-DD
+Task ID: TASK-000
+Owner:
+Approval scope:
+Approval status: pending / approved / not-required
 
-Evidence inspected:
-
-Business facts used:
-
-Keyword/entity/page clusters:
-
-Recommended allocation:
-
-Priority backlog:
-
-Risks and anti-patterns:
-
-Validation plan:
-
-Measurement window:
-
-Approval needed:
-```
-
-## Backlog
-
-```markdown
-| Priority | Item | Track | Page/File | Evidence | Effort | Risk | Validation | Approval |
-|---|---|---|---|---|---:|---:|---|---|
-| P1 |  |  |  |  |  |  |  | pending |
-```
-
-## Change Report
-
-```markdown
-**Change Summary**
-
-Objective:
-
-Approved scope:
-
-Evidence inspected:
-
-Files changed:
-
-Visible UI/content impact:
-
-Business facts used:
-
-Validation performed:
-
-Results:
-
+Implemented changes:
+Files / URLs affected:
+Validation and baseline reference:
+Release record:
 Known limitations:
 
-Search/AI outcome status:
-
-Human actions required:
-
-Measurement window:
+External results: recorded separately in an Observation Report
+Confidence: verified / inference / hypothesis
+Change status: not-applicable / proposed / implemented-locally / deployed
+Observation status: not-measured / observing / observed
+Source: repository / live-site / platform-data — YYYY-MM-DD
 ```
 
-## Release Validation
+## 4. Observation Report
 
 ```markdown
-**Release Validation**
+# Observation Report
 
-Build:
+Date / observation window:
+Task ID: TASK-000
+Owner:
+Approval scope: observation only; no implementation implied
+Approval status: pending / approved / not-required
 
-URLs:
+Baseline reference:
+Method and environment:
+Observed result (not a causal claim):
+Comparison with baseline:
+Uncertainty and limitations:
+Next decision:
 
-SEO:
+Submitted: [record only when actually verifiable]
+Indexed: [record only when actually verifiable]
+Ranked: [record only when actually verifiable]
+Cited: [record only when actually verifiable]
+Converted: [record only when actually verifiable]
 
-Structured data:
-
-UX/device:
-
-Analytics/conversion:
-
-Diff scope:
-
-Human approval:
-```
-
-## Weekly Visibility Report
-
-```markdown
-**Weekly Search and AI Visibility Report**
-
-Date range:
-
-Search:
-
-AI visibility:
-
-Conversions:
-
-Notable changes:
-
-Experiment decisions:
-
-Next actions:
-```
-
-## Approval Gate
-
-Ask for approval in concrete terms:
-
-```markdown
-Please approve or revise:
-
-1. Priority services:
-2. Priority locations:
-3. Pages/content that may visibly change:
-4. Schema/business claims:
-5. Validation commands:
-6. Release/submission actions:
-7. Observation window and metrics:
+Confidence: verified / inference / hypothesis
+Change status: not-applicable / proposed / implemented-locally / deployed
+Observation status: not-measured / observing / observed
+Source: platform-data / analytics-export / search-results — YYYY-MM-DD
 ```

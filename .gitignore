@@ -22,6 +22,38 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
+# Local research, reports, and screenshots
+output/
+outputs/
+reports/
+screenshots/
+search-console-exports/
+search_console_exports/
+analytics-exports/
+analytics_exports/
+ga4-exports/
+ga4_exports/
+*search-console*.csv
+*search-console*.tsv
+*search-console*.xlsx
+*search_console*.csv
+*search_console*.tsv
+*search_console*.xlsx
+*analytics*.csv
+*analytics*.tsv
+*analytics*.xlsx
+*ga4*.csv
+*ga4*.tsv
+*ga4*.xlsx
+
+# Playwright local state and reports
+playwright/.auth/
+playwright/storage/
+playwright/.storage/
+test-results/
+playwright-report/
+blob-report/
+
 # OS/editor noise
 .DS_Store
 Thumbs.db

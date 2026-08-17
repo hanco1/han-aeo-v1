@@ -1,57 +1,38 @@
-# Upload Review
+# Current-Branch Candidate Review
 
-Review date: 2026-06-29
+Branch candidate: `codex/han-aeo-v1-optimization`
+Commit reviewed: `eb993e4` (multi-agent review completed 2026-08-16; follow-up documentation fixes land on this branch after that commit and must be included in the final pre-publication recheck)
 
-## Result
+## Status
 
-Status: passed for current upload candidate set.
+**Passed content, privacy, and hygiene review at `eb993e4` (2026-08-16).** A 15-agent review across four dimensions (secrets/privacy, content accuracy, claim verification, repo hygiene) found no credentials, no personal information, no private-material leakage, no stale references to deleted files, and no factual AEO/GEO errors; all YAML parses and all internal links resolve. Minor documentation clarifications identified by that review were applied on this branch after `eb993e4`.
 
-The original customer workflow archive was moved out of this repository before git initialization:
+The license gate below is resolved (MIT, selected 2026-08-16). The remaining pre-publication requirement is a recheck bound to the exact release commit, run immediately before flipping the repository public.
 
-```text
-E:\SEO-SKILLS_PRIVATE_DO_NOT_UPLOAD\original-client-workflow-private.zip
-```
+## Candidate file inventory
 
-Reason: the archive contained real customer identity, domain, contact details, address, social handles, and project-specific evidence. It must not be uploaded to GitHub.
-
-## Current Safety Rules
-
-- Do not commit zip archives or private source material.
-- Do not commit `.env`, credentials, certificates, private keys, analytics exports, Search Console exports, or logged-in browser screenshots.
-- Use the mock project in `examples/mock-aeo-project/` for public examples.
-
-## File Review Log
-
-| File | Review result |
+| Path | Intended role |
 |---|---|
-| `.gitignore` | Safe. Ignore rules for private archives, env files, credentials, certs, caches, and editor noise. |
-| `README.md` | Safe. Public project overview only. |
-| `UPLOAD_REVIEW.md` | Safe. Contains review status and no real customer identity. |
-| `examples/mock-aeo-project/ai-visibility-prompts.md` | Safe. Mock-only prompts with fictional brand and example locations. |
-| `examples/mock-aeo-project/site-facts.yaml` | Safe. Fictional project facts, test domain, and mock contact. |
-| `examples/mock-aeo-project/strategy-brief.md` | Safe. Mock-only AEO strategy sample. |
-| `han-aeo-v1/SKILL.md` | Safe. Reusable skill workflow, no real customer identity. |
-| `han-aeo-v1/agents/openai.yaml` | Safe. Skill UI metadata only. |
-| `han-aeo-v1/references/aeo-workflow.md` | Safe. General AEO workflow reference. |
-| `han-aeo-v1/references/browser-automation.md` | Safe. General browser/Chrome usage rules. |
-| `han-aeo-v1/references/keyword-research.md` | Safe. General keyword/entity allocation rules. |
-| `han-aeo-v1/references/output-templates.md` | Safe. Generic output templates. |
-| `han-aeo-v1/scripts/aeo_plan_scaffold.py` | Safe. Local scaffold generator; no secrets or network calls. |
+| `.gitignore` | Keeps local secrets, exports, reports, screenshots, and Playwright state out of the repository. |
+| `README.md` | Installation and concise usage guide for the Agent Skill. |
+| `UPLOAD_REVIEW.md` | Candidate-review record and release gate. |
+| `docs/integrations/last30days.md` | Optional third-party research-skill integration note. |
+| `examples/mock-aeo-project/ai-visibility-prompts.md` | Mock questions. |
+| `examples/mock-aeo-project/site-facts.yaml` | Mock business-fact input. |
+| `examples/mock-aeo-project/strategy-brief.md` | Mock proposal. |
+| `han-aeo-v1/SKILL.md` | Agent Skill instructions. |
+| `han-aeo-v1/agents/openai.yaml` | Skill metadata. |
+| `han-aeo-v1/references/*.md` | General AEO workflow references. |
 
-## Verification Commands Run
+The former API tutorial, GIF storyboard, and GIF-rendering script are not part of this candidate.
 
-```text
-rg --files -uu
-rg -n -uu -i "customer-name-patterns|secret-patterns" .
-Get-ChildItem -Force -Recurse -Include *.zip,*.env,*.pem,*.key,*.p12,*.pfx,id_rsa,id_ed25519
-python C:/Users/User/.codex/skills/.system/skill-creator/scripts/quick_validate.py E:/SEO-SKILLS/han-aeo-v1
-python han-aeo-v1/scripts/aeo_plan_scaffold.py --project "Sample Glow Studio" --domain "https://example-glow.test" --track keyword-entity --track technical-seo
-```
+## Required review before publication
 
-## Verification Notes
+- Record the branch and exact commit hash being reviewed — recorded above.
+- Recheck the candidate for private source material, credentials, exports, logged-in browser state, and generated reports — completed 2026-08-16 at `eb993e4`.
+- Rerun the relevant validation and review the final file inventory after all release changes are in place — done at `eb993e4` on 2026-08-16; must be rerun against the final release commit before publication.
+- Have the owner choose a license — **done: MIT, selected by the owner 2026-08-16** (`LICENSE` at the repository root).
 
-- No upload candidate file contains the original customer name, domain, email, address, or social handle patterns searched.
-- No zip archives or credential-like files remain in the repository.
-- Secret-pattern scan only matched generic safety words such as `credentials` and `credential` in documentation.
-- Skill validation passed.
-- Scaffold script ran successfully with the mock project.
+## License gate
+
+**Resolved.** The owner selected the MIT license on 2026-08-16; `LICENSE` is at the repository root. Do not publish as open source until the final commit-bound review is complete.

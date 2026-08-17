@@ -1,16 +1,22 @@
+# FICTIONAL SAMPLE ONLY — DO NOT SUBMIT, DEPLOY, OR RUN AS A REAL PROJECT.
+sample:
+  is_mock: true
+  notice: "All names, services, locations, and facts below are invented workflow examples."
+
 project:
   name: "Sample Glow Studio"
-  production_domain: "https://example-glow.test"
-  framework: "Next.js App Router"
-  deployment_platform: "Vercel"
+  example_domain: "https://example-glow.test"
+  production_domain: null
+  framework: "Next.js App Router (example only)"
+  deployment_platform: "Example deployment platform"
   default_branch: "main"
 
 business:
   primary_name: "Sample Glow Studio"
   alternate_names:
     - "Sample Glow"
-  type: "Local beauty service studio"
-  description: "A fictional local studio used to demonstrate an AEO workflow."
+  type: "Fictional local beauty service studio"
+  description: "An invented studio used only to demonstrate an AEO workflow."
   address:
     city: "Example City"
     region: "Example Region"
@@ -31,7 +37,18 @@ business:
       active: true
   contacts:
     email: "hello@example-glow.test"
-    instagram: "https://www.instagram.com/exampleglowstudio/"
+  languages:
+    - language: "English"
+      status: "fictional example language"
+    - language: "Chinese"
+      status: "research language only; not a confirmed service language"
+
+evidence:
+  confidence: "verified"
+  change_status: "not-applicable"
+  observation_status: "not-measured"
+  source: "repository: examples/mock-aeo-project/site-facts.yaml — 2026-08-15"
+  owner_approval_status: "not-required"
 
 goals:
   selected_tracks:
@@ -41,10 +58,11 @@ goals:
   conversion_events:
     - "booking inquiry"
     - "contact form submission"
-  observation_window: "30 days"
+  observation_window: "example only; no data collection"
 
 constraints:
-  private_facts:
-    - "Exact studio address is not public in this mock."
+  privacy_rules:
+    - "Do not treat this fictional record as a source for real business claims."
+    - "Do not publish an address, service area, language, or contact channel without owner approval."
   no_go_actions:
-    - "No production submissions in mock project."
+    - "No production submissions, deployments, or platform runs in this mock project."
