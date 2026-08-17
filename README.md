@@ -7,7 +7,7 @@
 ![Type](https://img.shields.io/badge/type-Agent%20Skill-blue)
 ![Version](https://img.shields.io/badge/version-v1-8A2BE2)
 ![Runtime](https://img.shields.io/badge/runtime-no%20dependencies-success)
-![License](https://img.shields.io/badge/license-pending-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 [Quick Start](#-quick-start) · [How It Works](#-how-it-works) · [What It Produces](#-what-it-produces) · [Mock Project](#-mock-project) · [Optional Integration](#-optional-integration) · [License](#-upload-and-license)
 
@@ -22,7 +22,7 @@ Han AEO v1 helps an agent research a site, build an evidence base, prepare a pri
 
 ## 🚀 Quick Start
 
-This repository is currently private, so cloning requires authenticated GitHub access. A future public release still requires an owner-selected `LICENSE` and final review; once public, use the same clone command directly.
+This repository is currently private, so cloning requires authenticated GitHub access. A future public release still requires a final commit-bound review; once public, use the same clone command directly.
 
 Clone the repository, then copy the skill directory to `$HOME/.agents/skills/han-aeo-v1`:
 
@@ -121,4 +121,4 @@ It does not add `llms.txt` by default. Consider it only when it fits the approve
 
 ## 📄 Upload and License
 
-See [UPLOAD_REVIEW.md](UPLOAD_REVIEW.md) before sharing this repository. No license has been selected; a public open-source release remains blocked until the owner makes that choice.
+Licensed under the [MIT License](LICENSE). See [UPLOAD_REVIEW.md](UPLOAD_REVIEW.md) before sharing this repository publicly — a final commit-bound review is still required before flipping it public.
